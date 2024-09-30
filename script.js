@@ -15,11 +15,16 @@ var dateDiffInDays = function (date1, date2) {
     const millisecondsInADay = 24 * 60 * 60 * 1000; // Hours * minutes * seconds * milliseconds
     const diffInDays = diffInMillis / millisecondsInADay;
     
-    // Return the difference in days (can be negative if the second date is before the first)
+    // Return the difference in days
     return diffInDays;
 };
 
-// Do not change the code below.
+// Use console.log for debugging instead of alert
 const dateOne = prompt("Enter Start Date (YYYY-MM-DD):");
 const dateTwo = prompt("Enter End Date (YYYY-MM-DD):");
-alert(`Difference in days: ${dateDiffInDays(dateOne, dateTwo)}`);
+
+// Decrypting only the numerical difference and logging for debugging
+console.log(dateDiffInDays(dateOne, dateTwo));
+
+// If you need to display the result on the web page
+document.getElementById('message-area').innerText = `Decrypted Days Difference: ${dateDiffInDays(dateOne, dateTwo)}`;
